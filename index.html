@@ -34,17 +34,19 @@
   });
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://osm.org/copyright">\
-        OpenStreetMap</a> contributors, &copy;\
-        <a href="https://carto.com/attribution">CARTO</a>'
-  }).addTo(map);
+  var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  });
 
   /* Display a point marker with pop-up text */
-  L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
-  .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
-
+  L.marker([41.745250, -72.691680]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Trinity College"); // EDIT pop-up text message
+  L.marker([41.556610, -72.656906]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Wesleyan University"); // EDIT pop-up text message
+  L.marker([41.379540, -72.104110]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Connecticut College"); // EDIT pop-up text message
+    
+    
   </script>
 </body>
 </html>
