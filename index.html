@@ -37,6 +37,7 @@
   var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
   });
+  }).addTo(map);
 
   /* Display a point marker with pop-up text */
   L.marker([41.745250, -72.691680]).addTo(map) // EDIT marker coordinates
